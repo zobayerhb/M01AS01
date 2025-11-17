@@ -87,3 +87,31 @@ const users = [
 ];
 
 // console.log(filterActiveUsers(users));
+
+// PROBLEM 06
+
+interface Book {
+  title: string;
+  author: string;
+  publishedYear: number;
+  isAvailable: boolean;
+}
+
+const printBookDetails = (book: Book): void => {
+  const availableBook = book.isAvailable === true ? "Yes" : "No";
+
+  const bookAuthorInfo = `Title: ${book.title}, Author: ${book.author}, Published: ${book.publishedYear}, Available: ${availableBook}`;
+
+  console.log(bookAuthorInfo);
+};
+
+const myBook: Book = {
+  title: "The Great Gatsby",
+  author: "F. Scott Fitzgerald",
+  publishedYear: 1925,
+  isAvailable: false,
+};
+
+printBookDetails(myBook);
+
+// Title: The Great Gatsby, Author: F. Scott Fitzgerald, Published: 1925, Available: Yes
