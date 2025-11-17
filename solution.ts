@@ -80,7 +80,7 @@ const filterActiveUsers = (user: ActiveUsers[]): ActiveUsers[] => {
   return activeUsers;
 };
 
-const users = [
+const users: ActiveUsers[] = [
   { id: 1, name: "Rakib", email: "rakib@example.com", isActive: false },
   { id: 2, name: "Asha", email: "asha@example.com", isActive: false },
   { id: 3, name: "Rumi", email: "rumi@example.com", isActive: true },
@@ -115,3 +115,63 @@ const myBook: Book = {
 printBookDetails(myBook);
 
 // Title: The Great Gatsby, Author: F. Scott Fitzgerald, Published: 1925, Available: Yes
+
+// PROBLEM 07
+
+type UniqueValuse = string | number;
+
+const getUniqueValues = (
+  arr1: UniqueValuse[],
+  arr2: UniqueValuse[]
+): UniqueValuse[] => {
+  const storeResult: UniqueValuse[] = [];
+
+  const addIfNotExist = (values: UniqueValuse) => {
+    let isExist = false;
+
+    for (let i = 0; i < storeResult.length; i++) {
+      if (storeResult[i] === values) {
+        isExist = true;
+        return;
+      }
+    }
+
+    if (!isExist) {
+      storeResult.push(values);
+    }
+  };
+
+  for (let i = 0; i < arr1.length; i++) {
+    addIfNotExist(arr1[i]);
+  }
+  for (let i = 0; i < arr2.length; i++) {
+    addIfNotExist(arr2[i]);
+  }
+
+  return storeResult;
+};
+
+const array1 = [1, 2, 3, 4, 5];
+const array2 = [3, 4, 5, 6, 7];
+const array3 = ["1", "2", "3", "4", "5"];
+const array4 = ["3", "4", "5", "6", "7"];
+console.log(getUniqueValues(array3, array4));
+
+// PROBLEM 08
+
+type TotalPrice = {
+  name: string;
+  price: number;
+  quantity: number;
+  discount?: number;
+};
+
+const calculateTotalPrice = (items: TotalPrice[]): number => {};
+
+const products: TotalPrice[] = [
+  { name: "Pen", price: 10, quantity: 2 },
+  { name: "Notebook", price: 25, quantity: 3, discount: 10 },
+  { name: "Bag", price: 50, quantity: 1, discount: 20 },
+];
+
+console.log(calculateTotalPrice(products));
