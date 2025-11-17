@@ -27,7 +27,6 @@ const getLength = (getLengthValues: GetLength) => {
 // console.log(getLength(["Zobayer", 1, true, false, undefined, null]));
 // console.log(getLength("zobayer hosen"))
 
-
 // PROBLEM 03
 
 class Person {
@@ -43,4 +42,25 @@ class Person {
   }
 }
 const getResult = new Person("Zobayer Hosen", 21);
-console.log(getResult.getDetails());
+// console.log(getResult.getDetails());
+
+// PROBLEM 04
+
+type Item = {
+  title: string;
+  rating: number;
+};
+
+const filterByRating = (item: Item[]): Item[] => {
+  const filteredResult = item.filter((item) => item.rating >= 4);
+
+  return filteredResult;
+};
+
+const books = [
+  { title: "Book A", rating: 4.5 },
+  { title: "Book B", rating: 3.9 },
+  { title: "Book C", rating: 5.0 },
+];
+// console.log(filterByRating(books));
+// console.log(books)
