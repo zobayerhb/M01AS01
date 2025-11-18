@@ -1,4 +1,4 @@
-# 🟦 TypeScript: `type` vs `interface`
+# TypeScript: `type` vs `interface`
 
 TypeScript এ আমরা দুইভাবে structure define করতে পারি — **type** এবং **interface**।  
 দুটোই দেখতে একই রকম লাগে, কিন্তু কাজের ক্ষেত্রে কিছু গুরুত্বপূর্ণ পার্থক্য আছে।
@@ -11,7 +11,7 @@ TypeScript এ আমরা দুইভাবে structure define করতে 
 
 ---
 
-# 🟦 type কি?
+# type কি?
 
 TypeScript এ `type` ব্যবহার করে আমরা object, function, union, tuple — অনেক কিছুই define করতে পারি।
 
@@ -25,7 +25,7 @@ type User = {
   age: number;
 };
 ```
-# 🟧 TypeScript এ `interface` কি?
+# TypeScript এ `interface` কি?
 
 `interface` হল TypeScript এ object এর structure বা shape define করার জন্য সবচেয়ে বেশি ব্যবহৃত একটি পদ্ধতি।  
 এটি future–proof, extend করা সহজ, এবং বড় project–এ maintain করা খুব সুবিধাজনক।
@@ -45,7 +45,7 @@ interface User {
 
 
 ---
-# 🟦 TypeScript: Union & Intersection Types
+# TypeScript: Union & Intersection Types
 
 TypeScript এ আমরা দুই ধরনের powerful type system পাই— **Union Type** এবং **Intersection Type**।  
 দুটোই ভিন্ন কাজে ব্যবহার হয় এবং advanced typing এ খুব সাহায্য করে।
@@ -59,7 +59,7 @@ TypeScript এ আমরা দুই ধরনের powerful type system প�
 
 ---
 
-# 🟨 Union Type কি?
+# Union Type কি?
 
 Union টাইপ মানে হলো — **একটি ভেরিয়েবল একাধিক টাইপের একটি হতে পারে**।
 
@@ -78,7 +78,7 @@ currentStatus = "loading";
 ```
 
 ---
-# 🟦 TypeScript Intersection Type
+# TypeScript Intersection Type
 
 TypeScript এ **Intersection Type** (`&`) এমন একটি powerful concept যা দিয়ে আমরা **একাধিক টাইপকে merge করে একটি নতুন টাইপ তৈরি** করতে পারি।
 
@@ -86,7 +86,7 @@ TypeScript এ **Intersection Type** (`&`) এমন একটি powerful conce
 
 ---
 
-# 🟧 Intersection Type কি?
+# Intersection Type কি?
 
 Intersection টাইপ মানে হলো:
 
