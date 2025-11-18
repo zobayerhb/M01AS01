@@ -1,4 +1,4 @@
-// PROBLEM 1
+
 type FormatValue = string | number | boolean;
 
 const formatValue = (values: FormatValue): FormatValue => {
@@ -155,7 +155,7 @@ const array1 = [1, 2, 3, 4, 5];
 const array2 = [3, 4, 5, 6, 7];
 const array3 = ["1", "2", "3", "4", "5"];
 const array4 = ["3", "4", "5", "6", "7"];
-console.log(getUniqueValues(array3, array4));
+// console.log(getUniqueValues(array3, array4));
 
 // PROBLEM 08
 
@@ -166,7 +166,21 @@ type TotalPrice = {
   discount?: number;
 };
 
-const calculateTotalPrice = (items: TotalPrice[]): number => {};
+const calculateTotalPrice = (items: TotalPrice[]): number => {
+  let totalPrice = 0;
+  for (let i = 0; i < items.length; i++) {
+    const product = items[i];
+
+    const discountAmount = product.discount
+      ? (product.price * product.discount) / 100
+      : 0;
+
+    totalPrice =
+      totalPrice + (product.price - discountAmount) * product.quantity;
+  }
+
+  return totalPrice;
+};
 
 const products: TotalPrice[] = [
   { name: "Pen", price: 10, quantity: 2 },
