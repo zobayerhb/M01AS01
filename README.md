@@ -90,7 +90,7 @@ TypeScript এ **Intersection Type** (`&`) এমন একটি powerful conce
 
 Intersection টাইপ মানে হলো:
 
-> **একটি টাইপ = একাধিক টাইপের সমন্বয় (all properties combined)**
+> **একটি টাইপ = একাধিক টাইপের সমন্বয়**
 
 TypeScript এ Intersection তৈরি হয় `&` অপারেটর দিয়ে।
 
